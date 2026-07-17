@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   id="svg_wazuka-track-line-editor"
+   version="1.1"
+   viewBox="0 0 512 512"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="icon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     bordercolor="#000000"
+     borderopacity="0.25"
+     id="namedview1"
+     pagecolor="#ffffff"
+     showgrid="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:pagecheckerboard="0"
+     inkscape:pageopacity="0.0"
+     inkscape:showpageshadow="2">
+    <inkscape:grid
+       color="#0099e5"
+       empcolor="#0099e5"
+       empopacity="0.3"
+       empspacing="4"
+       enabled="true"
+       id="grid1"
+       opacity="0.15"
+       originx="256"
+       originy="256"
+       spacingx="4"
+       spacingy="4"
+       units="px"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <path
+     d="m 256,0 a 256,256 0 0 1 0,512 256,256 0 0 1 0,-512 z"
+     style="fill:#ffffff" />
+  <path
+     d="m 256,20 a 236,236 0 0 1 0,472 236,236 0 0 1 0,-472 z"
+     style="fill:#338000" />
+  <path
+     d="m 256,44 a 212,212 0 0 1 0,424 212,212 0 0 1 0,-424 z"
+     style="fill:#ffffff" />
+  <path
+     d="m 368,416 c -128,-16 -224,-64 -304,-160"
+     style="fill:none;stroke:#333333;stroke-width:32;stroke-linecap:butt;" />
+  <path
+     d="m 368,416 c -128,-16 -224,-64 -304,-160"
+     style="fill:none;stroke:#ffffff;stroke-width:20;stroke-linecap:butt;stroke-dasharray:48, 48;stroke-dashoffset:40;" />
+  <path
+     d="m 240,268 20,20 136,-136 -20,-20 z"
+     style="fill:#338000;" />
+  <path
+     d="m 192,336 16,-40 24,24 z"
+     style="fill:#333333;" />
+  <path
+     d="m 192,336 32,-80 144,-144 48,48 -144,144 z"
+     style="fill:none;stroke:#333333;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;" />
+</svg>

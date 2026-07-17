@@ -1,0 +1,14 @@
+{
+  "Common": {
+    "appname": "軌道中心線エディター"
+  },
+  "TrackSelector": {
+    "title": "Track Selector"
+  },
+  "TrackEditor": {
+    "title": "Track Editor"
+  },
+  "Map": {
+    "title": "Map"
+  }
+}

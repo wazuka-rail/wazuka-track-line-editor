@@ -1,0 +1,14 @@
+{
+  "Common": {
+    "appname": "Track Line Editor"
+  },
+  "TrackSelector": {
+    "title": "Track Selector"
+  },
+  "TrackEditor": {
+    "title": "Track Editor"
+  },
+  "Map": {
+    "title": "Map"
+  }
+}
