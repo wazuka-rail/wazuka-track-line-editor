@@ -34,6 +34,10 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  experimental: {
+    turbopackFileSystemCacheForDev: false,
+    turbopackFileSystemCacheForBuild: false,
+  },
 };
 
 const withNextIntl = createNextIntlPlugin();
