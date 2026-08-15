@@ -1,15 +1,11 @@
-"use client";
+import { getTranslations } from "next-intl/server";
 
-import { useTranslations } from "next-intl";
-
-const Map = () => {
-  const t = useTranslations("Map");
+export default async function Map() {
+  const t = await getTranslations("Map");
 
   return (
     <div>
       {t("title")}
     </div>
   );
-};
-
-export default Map;
+}

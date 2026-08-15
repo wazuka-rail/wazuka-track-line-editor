@@ -1,15 +1,11 @@
-"use client";
+import { getTranslations } from "next-intl/server";
 
-import { useTranslations } from "next-intl";
-
-const TrackSelector = () => {
-  const t = useTranslations("TrackSelector");
+export default async function TrackSelector() {
+  const t = await getTranslations("TrackSelector");
 
   return (
     <div>
       {t("title")}
     </div>
   );
-};
-
-export default TrackSelector;
+}

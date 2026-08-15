@@ -1,26 +1,19 @@
-"use client";
-
-import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { AppIcon } from "./icons";
 
-const Header = () => {
-  const t = useTranslations("Common");
+export default async function Header() {
+  const t = await getTranslations("Common");
 
   return (
     <header className="bg-white shadow">
       <div className="mx-0 px-4 flex flex-col">
         <div className="flex items-center justify-between">
-          <Link href="/">
-            <button className="text-2xl font-normal">
-              <AppIcon className="size-12" />
-              <span>{t("appname")}</span>
-            </button>
-          </Link>
+          <button className="text-2xl font-normal">
+            <AppIcon className="size-12" />
+            <span>{t("appname")}</span>
+          </button>
         </div>
       </div>
     </header>
   );
-};
-
-export default Header;
+}
