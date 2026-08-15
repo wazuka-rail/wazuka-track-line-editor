@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import { routing } from "@/i18n/routing";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getLocale } from "next-intl/server";
 import { Noto_Sans_JP } from "next/font/google";
 import { notFound } from "next/navigation";
 
@@ -13,28 +13,22 @@ const noto = Noto_Sans_JP({
   variable: "--font-noto-sans",
 });
 
-interface Props {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}
+export default async function LocaleLayout(
+  { children }: LayoutProps<"/[locale]">,
+) {
+  const locale = await getLocale();
 
-export default async function LocaleLayout({ children, params }: Props) {
-  const { locale } = await params;
-
-  if (!(routing.locales as readonly string[]).includes(locale)) {
+  if (!(hasLocale(routing.locales, locale))) {
     notFound();
   }
-
-  setRequestLocale(locale);
-  const messages = await getMessages({ locale });
 
   return (
     <html
       lang={locale}
-      className={`${noto.variable} w-screen h-screen antialiased`}
+      className={`${noto.variable} antialiased`}
     >
       <body>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={{}}>
           <Header />
           <main>
             {children}

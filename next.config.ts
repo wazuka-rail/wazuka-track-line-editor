@@ -9,12 +9,6 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   reactStrictMode: true,
   trailingSlash: true,
-  logging: {
-    fetches: {
-      fullUrl: true,
-      hmrRefreshes: true,
-    },
-  },
   images: {
     unoptimized: true,
   },

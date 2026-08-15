@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: dprint check
         uses: dprint/check@v2.3
       - name: Detect package manager
@@ -51,7 +51,7 @@ jobs:
             exit 1
           fi
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: "latest"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
@@ -65,7 +65,7 @@ jobs:
           static_site_generator: next
           generator_config_file: next.config.ts
       - name: Restore cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: |
             .next/cache
