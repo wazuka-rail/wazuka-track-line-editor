@@ -4,14 +4,16 @@
   "author": "wazuka-rail",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "vitest run --typecheck"
   },
   "dependencies": {
-    "next": "^16.3.1",
-    "next-intl": "^4.13.6",
+    "next": "^16.3.2",
+    "next-intl": "^4.13.7",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-split-pane": "^3.2.0"
@@ -23,8 +25,9 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "babel-plugin-react-compiler": "^1",
-    "dprint": "^0.55.2",
+    "dprint": "^0.56.1",
     "tailwindcss": "^4",
-    "typescript": "^7"
+    "typescript": "^7",
+    "vitest": "^4.1.11"
   }
 }

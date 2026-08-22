@@ -28,6 +28,11 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  typescript: {
+    tsconfigPath: process.env.NODE_ENV === "production"
+      ? "tsconfig.build.json"
+      : "tsconfig.json",
+  },
   experimental: {
     turbopackFileSystemCacheForDev: false,
     turbopackFileSystemCacheForBuild: false,
