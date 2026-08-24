@@ -1,9 +1,8 @@
 import Map from "@/components/Map";
-import SplitPane from "@/components/SplitPane";
+import SplitPane, { Pane } from "@/components/SplitPane";
 import TrackEditor from "@/components/TrackEditor";
 import TrackSelector from "@/components/TrackSelector";
 import { getTranslations } from "next-intl/server";
-import { Pane } from "react-split-pane";
 
 export async function generateMetadata() {
   const t = await getTranslations("Common");
@@ -15,7 +14,7 @@ export async function generateMetadata() {
 export default function Home() {
   return (
     <SplitPane>
-      <Pane>
+      <Pane defaultSize="250px">
         <TrackSelector />
       </Pane>
       <Pane>

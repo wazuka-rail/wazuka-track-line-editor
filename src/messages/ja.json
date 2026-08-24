@@ -3,7 +3,8 @@
     "appname": "軌道中心線エディター"
   },
   "TrackSelector": {
-    "title": "Track Selector"
+    "title": "軌道選択",
+    "treeLabel": "駅・駅間ごとの軌道"
   },
   "TrackEditor": {
     "title": "Track Editor"

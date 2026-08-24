@@ -3,7 +3,8 @@
     "appname": "Track Line Editor"
   },
   "TrackSelector": {
-    "title": "Track Selector"
+    "title": "Track Selector",
+    "treeLabel": "Tracks by station or section"
   },
   "TrackEditor": {
     "title": "Track Editor"

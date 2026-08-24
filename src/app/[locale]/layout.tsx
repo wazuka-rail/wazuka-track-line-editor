@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import TrackDatasetProvider from "@/data/TrackDatasetProvider";
 import { routing } from "@/i18n/routing";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
@@ -28,11 +29,13 @@ export default async function LocaleLayout(
       className={`${noto.variable} antialiased`}
     >
       <body>
-        <NextIntlClientProvider messages={{}}>
-          <Header />
-          <main>
-            {children}
-          </main>
+        <NextIntlClientProvider>
+          <TrackDatasetProvider>
+            <Header />
+            <main>
+              {children}
+            </main>
+          </TrackDatasetProvider>
         </NextIntlClientProvider>
       </body>
     </html>
