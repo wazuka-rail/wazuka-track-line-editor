@@ -100,7 +100,7 @@
   div.split-pane-pane {
     @apply flex flex-col;
   }
-  div.split-pane-pane div {
+  div.split-pane-pane > div {
     background: var(--background-secondary);
     @apply m-2 p-2 shadow-md rounded-lg grow;
   }
