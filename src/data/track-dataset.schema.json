@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "formatVersion": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "geoSrid": {
+      "type": "string"
+    },
+    "planeSrid": {
+      "type": "string"
+    },
+    "trackGroups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "trackIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "trackIds"
+        ]
+      }
+    },
+    "trackNodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/__schema0"
+          },
+          "name": {
+            "type": "string"
+          },
+          "pos": {
+            "$ref": "#/$defs/__schema1"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "pos"
+        ]
+      }
+    },
+    "tracks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "startNodeId": {
+            "$ref": "#/$defs/__schema0"
+          },
+          "endNodeId": {
+            "$ref": "#/$defs/__schema0"
+          },
+          "properties": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "m": {
+                          "type": "string",
+                          "const": "rem"
+                        }
+                      },
+                      "required": [
+                        "m"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "m": {
+                          "type": "string",
+                          "const": "nod"
+                        },
+                        "refId": {
+                          "$ref": "#/$defs/__schema0"
+                        },
+                        "km": {
+                          "type": "string",
+                          "pattern": "^[ ]*-?\\d+k\\d{3}m\\d{0,3}$"
+                        },
+                        "pos": {
+                          "$ref": "#/$defs/__schema1"
+                        },
+                        "bearing": {
+                          "anyOf": [
+                            {
+                              "type": "number",
+                              "minimum": 0,
+                              "maximum": 360
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "hTol": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "vTol": {
+                          "type": "number",
+                          "minimum": 0
+                        }
+                      },
+                      "required": [
+                        "m",
+                        "refId",
+                        "km",
+                        "pos",
+                        "bearing",
+                        "hTol",
+                        "vTol"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "startNodeId",
+          "endNodeId",
+          "properties"
+        ]
+      }
+    }
+  },
+  "required": [
+    "formatVersion",
+    "id",
+    "name",
+    "version",
+    "geoSrid",
+    "planeSrid",
+    "trackGroups",
+    "trackNodes",
+    "tracks"
+  ],
+  "$defs": {
+    "__schema0": {
+      "type": "string"
+    },
+    "__schema1": {
+      "type": "object",
+      "properties": {
+        "lat": {
+          "$ref": "#/$defs/__schema2"
+        },
+        "lon": {
+          "$ref": "#/$defs/__schema2"
+        },
+        "h": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": -1000,
+              "maximum": 10000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "lat",
+        "lon",
+        "h"
+      ]
+    },
+    "__schema2": {
+      "type": "number",
+      "minimum": -180,
+      "maximum": 180
+    }
+  }
+}

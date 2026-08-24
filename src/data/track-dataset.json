@@ -1,0 +1,136 @@
+{
+  "formatVersion": "0.1.0",
+  "id": "wazuka-line",
+  "name": "和束線",
+  "version": "2022-04-01 0.1.0",
+  "geoSrid": "EPSG:6668",
+  "planeSrid": "EPSG:6674",
+  "trackGroups": [
+    {
+      "id": "g11-kamo",
+      "name": "賀茂駅",
+      "trackIds": [
+        "t11-3-1"
+      ]
+    },
+    {
+      "id": "g12-kamo-ibirao",
+      "name": "賀茂駅-井平尾駅間",
+      "trackIds": [
+        "t12-m-1"
+      ]
+    },
+    {
+      "id": "g22-ibirao",
+      "name": "井平尾駅",
+      "trackIds": [
+        "t22-m-1",
+        "t22-m-2"
+      ]
+    },
+    {
+      "id": "g23-ibirao-ishitera",
+      "name": "井平尾駅-石寺駅間",
+      "trackIds": []
+    },
+    {
+      "id": "g34-ishitera-shirasu",
+      "name": "石寺駅-白栖駅間",
+      "trackIds": []
+    },
+    {
+      "id": "g45-shirasu-wazuka",
+      "name": "白栖駅-和束駅間",
+      "trackIds": []
+    },
+    {
+      "id": "g55-wazuka",
+      "name": "和束駅",
+      "trackIds": []
+    },
+    {
+      "id": "g56-wazuka-harayama",
+      "name": "和束駅-原山駅間",
+      "trackIds": []
+    },
+    {
+      "id": "g67-harayama-yubune",
+      "name": "原山駅-湯船駅間",
+      "trackIds": []
+    },
+    {
+      "id": "g78-yubune-higashiyubune",
+      "name": "湯船駅-東湯船駅間",
+      "trackIds": []
+    },
+    {
+      "id": "g89-higashiyubune-sunakodani",
+      "name": "東湯船駅-砂子谷駅間",
+      "trackIds": []
+    },
+    {
+      "id": "g99-sunakodani",
+      "name": "砂子谷駅",
+      "trackIds": []
+    }
+  ],
+  "trackNodes": [
+    {
+      "id": "n11-sc3",
+      "name": "賀茂駅中心",
+      "pos": { "lat": 0, "lon": 0, "h": 0 }
+    },
+    {
+      "id": "n11-bw",
+      "name": "賀茂駅境界（和束線）",
+      "pos": { "lat": 0, "lon": 0, "h": 0 }
+    },
+    {
+      "id": "n22-b1",
+      "name": "井平尾駅境界（起点方）",
+      "pos": { "lat": 0, "lon": 0, "h": 0 }
+    },
+    {
+      "id": "n22-sc",
+      "name": "井平尾駅中心",
+      "pos": { "lat": 0, "lon": 0, "h": 0 }
+    },
+    {
+      "id": "n22-b2",
+      "name": "井平尾駅境界（終点方）",
+      "pos": { "lat": 0, "lon": 0, "h": 0 }
+    }
+  ],
+  "tracks": [
+    {
+      "id": "t11-3-1",
+      "name": "賀茂駅3番線",
+      "startNodeId": "n11-sc3",
+      "endNodeId": "n11-bw",
+      "properties": [
+        [0.0, { "m": "nod", "refId": "n11-sc3", "km": "0k000m000", "pos": { "lat": 0, "lon": 0, "h": 0 }, "bearing": null, "hTol": 0, "vTol": 0 }, "賀茂駅中心"]
+      ]
+    },
+    {
+      "id": "t12-m-1",
+      "name": "賀茂-井平尾 本線",
+      "startNodeId": "n11-bw",
+      "endNodeId": "n22-b1",
+      "properties": []
+    },
+    {
+      "id": "t22-m-1",
+      "name": "井平尾駅本線（起点方）",
+      "startNodeId": "n22-b1",
+      "endNodeId": "n22-sc",
+      "properties": []
+    },
+    {
+      "id": "t22-m-2",
+      "name": "井平尾駅本線（終点方）",
+      "startNodeId": "n22-sc",
+      "endNodeId": "n22-b2",
+      "properties": []
+    }
+  ]
+}

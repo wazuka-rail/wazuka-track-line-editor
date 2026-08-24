@@ -3,6 +3,10 @@
   "typescript": {
   },
   "json": {
+    "overrides": {
+      "files": ["**/*-dataset.json"],
+      "lineWidth": 160
+    }
   },
   "yaml": {
   },
